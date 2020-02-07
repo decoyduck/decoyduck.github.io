@@ -21,6 +21,48 @@
         margin-right: 10px;
       }
     </style>
+  
+ </head>
+ <body>
+  <h1>Hello world!</h1>
+  <div class="block1">Block #1</div>
+  <div class="redirect">
+   <a target="_blank" id="redirect" href="https://decoyduck.github.io/redirect_1.html">Test redirect</a>
+  </div>
+    <div class="bot-detect">
+   <a target="_blank" id="bot-detect" href="https://intoli.com/blog/not-possible-to-block-chrome-headless/chrome-headless-test.html">Bot detect</a>
+  </div>
+
+  <table>
+      <tr>
+        <th>Test Name</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td>User Agent <span class="age">(Old)</span></td>
+        <td class="failed result" id="user-agent-result"></td>
+      </tr>
+      <tr>
+        <td>WebDriver <span class="age">(New)</span></td>
+        <td class="failed result" id="webdriver-result">present (failed)</td>
+      </tr>
+      <tr>
+        <td>Chrome <span class="age">(New)</span></td>
+        <td class="failed result" id="chrome-result">missing (failed)</td>
+      </tr>
+      <tr>
+        <td>Permissions <span class="age">(New)</span></td>
+        <td class="failed result" id="permissions-result"></td>
+      </tr>
+      <tr>
+        <td>Plugins Length <span class="age">(Old)</span></td>
+        <td class="failed result" id="plugins-length-result"></td>
+      </tr>
+      <tr>
+        <td>Languages <span class="age">(Old)</span></td>
+        <td class="failed result" id="languages-result"></td>
+      </tr>
+    </table>
   <script>
    // User-Agent Test
 const userAgentElement = document.getElementById('user-agent-result');
@@ -93,47 +135,5 @@ if (!navigator.languages || navigator.languages.length === 0) {
   languagesElement.classList.remove('failed');
 }
   </script>
- </head>
- <body>
-  <h1>Hello world!</h1>
-  <div class="block1">Block #1</div>
-  <div class="redirect">
-   <a target="_blank" id="redirect" href="https://decoyduck.github.io/redirect_1.html">Test redirect</a>
-  </div>
-    <div class="bot-detect">
-   <a target="_blank" id="bot-detect" href="https://intoli.com/blog/not-possible-to-block-chrome-headless/chrome-headless-test.html">Bot detect</a>
-  </div>
-
-  <table>
-      <tr>
-        <th>Test Name</th>
-        <th>Result</th>
-      </tr>
-      <tr>
-        <td>User Agent <span class="age">(Old)</span></td>
-        <td class="failed result" id="user-agent-result"></td>
-      </tr>
-      <tr>
-        <td>WebDriver <span class="age">(New)</span></td>
-        <td class="failed result" id="webdriver-result">present (failed)</td>
-      </tr>
-      <tr>
-        <td>Chrome <span class="age">(New)</span></td>
-        <td class="failed result" id="chrome-result">missing (failed)</td>
-      </tr>
-      <tr>
-        <td>Permissions <span class="age">(New)</span></td>
-        <td class="failed result" id="permissions-result"></td>
-      </tr>
-      <tr>
-        <td>Plugins Length <span class="age">(Old)</span></td>
-        <td class="failed result" id="plugins-length-result"></td>
-      </tr>
-      <tr>
-        <td>Languages <span class="age">(Old)</span></td>
-        <td class="failed result" id="languages-result"></td>
-      </tr>
-    </table>
-  
  </body>
 </html>
