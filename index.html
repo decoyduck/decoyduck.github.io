@@ -1,30 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
  <head>
-  <script src="http://underscorejs.org/underscore-min.js"></script>
-  <script>
-   var oldDefineProperty = Object.defineProperty;
-
-Object.defineProperty = function() {
-    var firstArg = arguments[0];
-    arguments[0] = _.extend({
-        get id() {
-            return firstArg.id;
-        }
-    }, arguments[0]);
-
-    return oldDefineProperty.apply(this, arguments);
-}
-
-var element = new Image();
-element.id = "something";
-Object.defineProperty(element, 'id', {
-    get: function() {
-        alert("detected");
-    }
-});
-console.log('%cHello', element);
-  </script>
+  
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Test page</title>
  </head>
@@ -34,5 +11,9 @@ console.log('%cHello', element);
   <div class="redirect">
    <a target="_blank" id="redirect" href="https://decoyduck.github.io/redirect_1.html">Test redirect</a>
   </div>
+    <div class="bot-detect">
+   <a target="_blank" id="bot-detect" href="https://intoli.com/blog/not-possible-to-block-chrome-headless/chrome-headless-test.html">Test redirect</a>
+  </div>
+
  </body>
 </html>
