@@ -1,22 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
  <head>
-  <script>
-    function ReadCookie() {
-            var allcookies = document.cookie;
-            document.write ("All Cookies : " + allcookies );
-
-            // Get all the cookies pairs in an array
-            cookiearray = allcookies.split(';');
-
-            // Now take key value pair out of this array
-            for(var i=0; i<cookiearray.length; i++) {
-               name = cookiearray[i].split('=')[0];
-               value = cookiearray[i].split('=')[1];
-               document.write ("Key is : " + name + " and Value is : " + value);
-            }
-         }
-  </script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Test page</title>
  </head>
@@ -25,8 +9,5 @@
   <div>
   <script async="async" data-cfasync="false" src="//native.propellerclick.com/1?z=3041288"></script>
   </div>
-  <script>
-   ReadCookie();
-  </script>
  </body>
 </html>
