@@ -68,9 +68,9 @@
         <td>Languages <span class="age">(Old)</span></td>
         <td class="failed result" id="languages-result"></td>
       </tr>
-         <tr>
-        <td>User agent <span class="ua">(Old)</span></td>
-        <td class="failed result" id="ua-result"></td>
+      <tr>
+        <td>Platform <span class="platform">(Old)</span></td>
+        <td class="failed result" id="platform-result"></td>
       </tr>
 
     </table>
@@ -146,9 +146,9 @@ if (!navigator.languages || navigator.languages.length === 0) {
   languagesElement.classList.add('passed');
   languagesElement.classList.remove('failed');
 }
-   // Languages Test
-const uaElement = document.getElementById('ua-result');
-uaElement.innerHTML = navigator.userAgent;
+   // Navigator Test
+const platformElement = document.getElementById('platform-result');
+uaElement.innerHTML = navigator.platform;
 
   </script>
  </body>
