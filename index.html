@@ -32,6 +32,9 @@
     <div class="bot-detect">
    <a target="_blank" id="bot-detect" href="https://intoli.com/blog/not-possible-to-block-chrome-headless/chrome-headless-test.html">Bot detect</a>
   </div>
+    <div class="user-agent">
+   <a target="_blank" id="user-agent" href="https://www.whatismybrowser.com/detect/what-is-my-user-agent">what-is-my-user-agentt</a>
+  </div>
 
   <table>
       <tr>
@@ -62,6 +65,11 @@
         <td>Languages <span class="age">(Old)</span></td>
         <td class="failed result" id="languages-result"></td>
       </tr>
+         <tr>
+        <td>User agent <span class="ua">(Old)</span></td>
+        <td class="failed result" id="ua-result"></td>
+      </tr>
+
     </table>
   <script>
    console.log('Page script run');
@@ -135,6 +143,10 @@ if (!navigator.languages || navigator.languages.length === 0) {
   languagesElement.classList.add('passed');
   languagesElement.classList.remove('failed');
 }
+   // Languages Test
+const uaElement = document.getElementById('ua-result');
+languagesElement.innerHTML = navigator.userAgent;
+
   </script>
  </body>
 </html>
